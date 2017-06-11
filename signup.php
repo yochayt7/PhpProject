@@ -20,6 +20,7 @@ else {
     }
     else{
         $msg = "Could not successfully run query ($sql) from DB.";
+        echo $msg;
         $jsonAns = ['signedup'=> 'false'];
         header('content-type: application/json');
         echo json_encode($jsonAns);
@@ -27,3 +28,4 @@ else {
     }
 }
 $conn->close();
+?>
